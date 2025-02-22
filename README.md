@@ -1,5 +1,6 @@
-# Indonesian Fighting Game Scene News Page
+# CSCV 337 Assignment 2
 
+This web application is designed as part of the **CSCV 337 Web Programming Assignment**.
 This project is part of the course assignment to build a news website focusing on the Indonesian fighting game scene. It involves creating a homepage and a news article page with responsive design and appropriate styling using HTML and CSS.
 
 ## Project Structure
