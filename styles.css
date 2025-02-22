@@ -133,9 +133,25 @@ footer {
 
 .small-img {
     align-items: left;
-    height: 10vh;
+    height: 30vh;
     border-radius: 3%;
-    object-fit:scale-down;
+    object-fit:cover;
+}
+
+.small-img {
+    align-items: left;
+    height: 30vh;
+    border-radius: 3%;
+    object-fit:cover;
+}
+
+.prof-img {
+    display: block;
+    height: 10vh;
+    width:10vw;
+    object-fit:contain;
+    /*object-fit:scale-down; 
+    margin: 0 auto; */
 }
 
 
@@ -172,6 +188,7 @@ footer {
     display: flex;
     align-items: left;
     /*gap: 10px;*/
+    margin-left: 5vw;
     margin-bottom: 10px;
 }
 
