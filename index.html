@@ -10,49 +10,75 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            <a href="index.html"><img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/EWGF.webp" alt="PlusFrame Combo Logo" style="padding-top: 10vh; object-fit: cover; object-position: center;"></a>
+            <a href="index.html">
+                <img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/EWGF.webp" 
+                     alt="PlusFrame Combo Logo" 
+                     style="padding-top: 10vh; object-fit: cover; object-position: center;">
+            </a>
         </div>
-        <ul class="nav-links">
-            <li><a href="article.html">Featured Article</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#"><span class="search-icon">🔍</span></a></li>
-        </ul>
 
+
+        <button class="hamburger" id="menuButton" aria-label="Toggle navigation" aria-expanded="false">
+            ☰
+        </button>
     </nav>
 
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="article.html">Featured Article</a>
+        <a href="#">Login</a>
+    </div>
+
     <header class="hero">
+        <img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/hero-image.jpg" alt="Fighting Game Esports" class="hero-image">
         <h1>PlusFrame Combo</h1>
-        <p>Your daily source Indonesian Fighting Game E-Sport news</p>
-        <a href="article.html">Read Today's Highlight</a>
+        <p>Your daily source for Indonesian Fighting Game E-Sport news</p>
+        <a href="article.html" class="cta-button">Read Today's Highlight</a>
     </header>
 
     <section class="news-grid">
         <article>
-            <img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/Screenshot_20-2-2025_111411_www.youtube.com.jpeg" alt="Drivals vs MyPro">
+            <img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/Screenshot_20-2-2025_111411_www.youtube.com.jpeg" 
+                 alt="Drivals vs MyPro">
             <h2><a href="article.html">DRivals vs MyPro Showmatch Result</a></h2>
             <p>Learn more about the Waseda Showmatch between Drivals team from Indonesia vs MyPro from Malaysia!</p>
         </article>
 
         <article>
-            <img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/Screenshot_20-2-2025_111340_www.youtube.com.jpeg" alt="KO Fest">
-            <h2><a href="#">KnockOut Festival Tekken League Recap</a></h2>
+            <img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/Screenshot_20-2-2025_111340_www.youtube.com.jpeg" 
+                 alt="KO Fest">
+            <h2><a href="article.html">KnockOut Festival Tekken League Recap</a></h2>
             <p>Click here to learn more about what happened at KnockOut Festival Indonesia 2025!</p>
         </article>
 
         <article>
-            <img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/Screenshot_20-2-2025_111243_www.youtube.com.jpeg" alt="SEA Batlle">
-            <h2><a href="#">SEA Showmatch Battle Result!</a></h2>
+            <img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/Screenshot_20-2-2025_111243_www.youtube.com.jpeg" 
+                 alt="SEA Battle">
+            <h2><a href="article.html">SEA Showmatch Battle Result!</a></h2>
             <p>Indonesia won the SEA Tekken 8 Battle on the SEA Showmatch between Indonesia and Malaysia! Click to learn more</p>
         </article>
 
         <article>
-            <img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/20241228_164504_IMG_7574.jpg" alt="MSI League">
-            <h2><a href="#">KANG | SawXer won the MSI Tekken 8 Tournament 2024!</a></h2>
-            <p>The MSI Tekken 8 Tournament was won by SawXer from KANG E-Sport! Click here to learn more about what happend at the tournament!</p>
+            <img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/20241228_164504_IMG_7574.jpg" 
+                 alt="MSI League">
+            <h2><a href="article.html">KANG | SawXer won the MSI Tekken 8 Tournament 2024!</a></h2>
+            <p>The MSI Tekken 8 Tournament was won by SawXer from KANG E-Sport! Click here to learn more about what happened at the tournament!</p>
         </article>
     </section>
 
-    <!-- Footer -->
+    <section class="related-news">
+        <h2>More Articles</h2>
+        <div class="news-flex">
+            <article>
+                <img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/small-article1.jpg" alt="Additional News 1" class="small-img">
+                <h3><a href="#">Upcoming Tekken Events</a></h3>
+            </article>
+            <article>
+                <img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/small-article2.jpg" alt="Additional News 2" class="small-img">
+                <h3><a href="#">Evo Tournament Highlights</a></h3>
+            </article>
+        </div>
+    </section>
+
     <footer>
         <div class="footer-links">
             <a href="#">Terms of Use</a> | 
@@ -60,5 +86,39 @@
         </div>
         <p>© PlusFrame Combo 2025. All rights reserved.</p>
     </footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var menuButton = document.getElementById("menuButton");
+            var mobileMenu = document.getElementById("mobileMenu");
+
+            function toggleMenu() {
+                var isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+                menuButton.setAttribute("aria-expanded", !isExpanded);
+                mobileMenu.classList.toggle("show");
+
+                
+                if (!isExpanded) {
+                    setTimeout(() => {
+                        mobileMenu.querySelector("a").focus();
+                    }, 100);
+                }
+            }
+
+            function closeMenuOnEsc(event) {
+                if (event.key === "Escape" && mobileMenu.classList.contains("show")) {
+                    toggleMenu();
+                    menuButton.focus();
+                }
+            }
+
+           
+            menuButton.addEventListener("click", toggleMenu);
+
+            
+            document.addEventListener("keydown", closeMenuOnEsc);
+        });
+    </script>
 </body>
 </html>
