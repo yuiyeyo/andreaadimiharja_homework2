@@ -24,5 +24,5 @@ This project is part of the course assignment to build a news website focusing o
 
 ## Live Site
 
-You can view the live site here: [Indonesian Fighting Game Scene News Page](https://yuiyeyo.github.io/andreaadimiharja_homework2/).
+You can view the live site here: [PlusFrame Combo](https://yuiyeyo.github.io/andreaadimiharja_homework2/).
 
