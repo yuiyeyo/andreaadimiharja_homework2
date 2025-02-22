@@ -117,11 +117,37 @@
         </div>
         <p>© NewsWave 2025. All rights reserved.</p>
     </footer>
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("mobileMenu");
-            menu.classList.toggle("show");
-        }
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var menuButton = document.getElementById("menuButton");
+            var mobileMenu = document.getElementById("mobileMenu");
+
+            function toggleMenu() {
+                var isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+                menuButton.setAttribute("aria-expanded", !isExpanded);
+                mobileMenu.classList.toggle("show");
+
+                
+                if (!isExpanded) {
+                    setTimeout(() => {
+                        mobileMenu.querySelector("a").focus();
+                    }, 100);
+                }
+            }
+
+            function closeMenuOnEsc(event) {
+                if (event.key === "Escape" && mobileMenu.classList.contains("show")) {
+                    toggleMenu();
+                    menuButton.focus();
+                }
+            }
+
+           
+            menuButton.addEventListener("click", toggleMenu);
+
+            
+            document.addEventListener("keydown", closeMenuOnEsc);
+        });
     </script>
     
 </body>
