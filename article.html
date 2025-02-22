@@ -11,19 +11,35 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            <a href="index.html"><img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/EWGF.webp" alt="PlusFrame Combo Logo" style="padding-top: 10vh; object-fit: cover; object-position: center;"></a>
+            <a href="index.html">
+                <img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/EWGF.webp" 
+                     alt="PlusFrame Combo Logo" 
+                     style="padding-top: 10vh; object-fit: cover; object-position: center;">
+            </a>
         </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#"><span class="search-icon">🔍</span></a></li>
-        </ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
     </nav>
 
-    <!-- Article Content -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="article.html">Featured Article</a>
+        <a href="#">Login</a>
+    </div>
+
     <article class="news-article">
+        <img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/Screenshot_20-2-2025_111243_www.youtube.com.jpeg" alt="SEA Showmatch Hero" class="hero-image">
+
         <h1>SEA Showmatch Battle Result!</h1>
-        <img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/Screenshot_20-2-2025_111243_www.youtube.com.jpeg" alt="SEA Showmatch">
+
+        <section class="players-flex">
+            <div class="player-profile">
+                <img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/lars.png" alt="Player 1" class="medium-img">
+                <p><strong>Astha (Indonesia)</strong></p>
+            </div>
+            <div class="player-profile">
+                <img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/lili.png" alt="Player 2" class="medium-img">
+                <p><strong>Jobber (Malaysia)</strong></p>
+            </div>
+        </section>
 
         <p>
             The SEA esports community was treated to an exhilarating 10 vs 10 Waseda-Style Fun Showmatch as Team Indonesia faced off against Team Malaysia in an intense battle of skill and strategy. With national pride and friendly rivalry on the line, both teams brought their best to the battlefield, delivering an action-packed showdown that kept viewers on the edge of their seats.</p>
@@ -46,6 +62,18 @@
 <p>Congratulations to SawXer, ArFear, and Team Indonesia for their victory, and a huge shoutout to Team Malaysia for putting up an incredible fight. With such an electrifying match in the books, fans can only hope for more epic showdowns in the future!</p>
 
 <p>🔥 GGWP to all! 🔥</p>
+
+<section class="comments">
+    <h2>Fan Comments</h2>
+    <div class="comment">
+        <img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/avatar%201.jpeg" alt="User Profile" class="small-img">
+        <p>"That was an intense match! Congrats to Indonesia!"</p>
+    </div>
+    <div class="comment">
+        <img src="https://raw.githubusercontent.com/yuiyeyo/andreaadimiharja_homework2/refs/heads/main/assets/avatar%202.jpeg" alt="User Profile" class="small-img">
+        <p>"GGWP to both teams. Can't wait for the next one!"</p>
+    </div>
+</section>
         
 
         <section class="recommended">
@@ -61,9 +89,10 @@
                 </article>
             </div>
         </section>
+
+        
     </article>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-links">
             <a href="#">Terms of Use</a> | 
@@ -71,6 +100,13 @@
         </div>
         <p>© NewsWave 2025. All rights reserved.</p>
     </footer>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("show");
+        }
+    </script>
+    
 </body>
 </html>
 
